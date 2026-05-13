@@ -124,12 +124,5 @@ HEADERS
 ```
 
 *2. Frame de Datos (DATA):*
-```http
-DATA
-  + END_STREAM (Fin de la transmisión)
-  <html>
-    <body>
-      <h1>Hola Mundo (HTTP/2.0)</h1>
-    </body>
-  </html>
-```
+<!--  -->
+hacemos una modificacion
