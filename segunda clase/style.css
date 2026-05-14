@@ -138,3 +138,47 @@ main.dark-mode #resultado-ejemplos {
     list-style: none;
     padding: 0;
 }
+
+/* ==========================================================================
+   Estilos para Animaciones CSS vs JS
+   ========================================================================== */
+   
+.pista-animacion {
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    overflow: hidden; /* Evita que la caja se desborde visualmente */
+}
+
+main.dark-mode .pista-animacion {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+.caja-animada {
+    width: 50px;
+    height: 50px;
+    background-color: #e83e8c; /* Rosa para CSS */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.js-color {
+    background-color: #f39c12; /* Naranja para JS */
+}
+
+/* 
+  LA MAGIA DE CSS:
+  Definimos que CUALQUIER cambio en la propiedad 'transform' 
+  debe ocurrir suavemente (ease-in-out) a lo largo de 1 segundo.
+*/
+.caja-css-animada {
+    transform: translateX(200px); /* Movemos 200px a la derecha */
+    transition: transform 1s ease-in-out;
+}

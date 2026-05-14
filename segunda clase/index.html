@@ -51,6 +51,32 @@
                 <!-- Aquí se agregarán dinámicamente los elementos <li> -->
             </ul>
         </section>
+
+        <!-- Nueva sección para Animaciones CSS vs JS -->
+        <hr class="separador">
+        <section>
+            <h2>Animaciones: CSS vs JS</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <div class="flex-container" style="justify-content: space-between; align-items: center;">
+                    <h3>1. CSS (Transiciones)</h3>
+                    <button id="btn-anim-css" class="btn-prueba btn-fijo">Animar (CSS)</button>
+                </div>
+                <div class="pista-animacion">
+                    <div id="caja-css" class="caja-animada">CSS</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex-container" style="justify-content: space-between; align-items: center;">
+                    <h3>2. JavaScript (Frames)</h3>
+                    <button id="btn-anim-js" class="btn-prueba btn-fijo">Animar (JS)</button>
+                </div>
+                <div class="pista-animacion">
+                    <div id="caja-js" class="caja-animada js-color">JS</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
