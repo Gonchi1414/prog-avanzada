@@ -38,3 +38,15 @@ section li {
     padding: 8px 15px;
     border-radius: 20px; /* Estilo de "etiqueta" para las habilidades */
 }
+
+/* Diseño Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+    main {
+        width: 90%; /* La tarjeta ocupa el 90% de la pantalla */
+    }
+
+    section ul {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centra los elementos en la columna para que se vean mejor */
+    }
+}
