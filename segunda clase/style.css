@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0e0e0; /* Fondo claro por defecto */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Para centrar verticalmente en toda la pantalla */
+}
+
+main {
+    background-color: #ffffff; /* Fondo claro para la tarjeta */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Padding interno */
+    margin: 20px; /* Margin (aunque está centrada por flexbox, da un margen en pantallas pequeñas) */
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Un toque visual extra */
+}
+
+section ul {
+    display: flex;
+    justify-content: space-around; /* Espacio uniforme entre los elementos */
+    flex-wrap: wrap; /* Saltan de línea si no caben */
+    list-style: none; /* Quitamos los puntos de la lista */
+    padding: 0;
+    gap: 10px; /* Espacio extra vertical/horizontal cuando se acomodan */
+}
+
+section li {
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px; /* Estilo de "etiqueta" para las habilidades */
+}
+
+/* Diseño Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+    main {
+        width: 90%; /* La tarjeta ocupa el 90% de la pantalla */
+    }
+
+    section ul {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centra los elementos en la columna para que se vean mejor */
+    }
+}
+
+/* Modo oscuro para el body */
+body.dark-mode {
+    background-color: #121212; /* Fondo muy oscuro */
+}
+
+/* Clase para el modo oscuro de la tarjeta */
+main.dark-mode {
+    background-color: #2c2c2c; /* Un fondo gris oscuro, distinto al negro del body */
+    color: #f0f0f0; /* Texto claro */
+}
+
+/* Para que el botón se vea un poco mejor */
+#btn-tema {
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main.dark-mode #btn-tema {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilos para la sección de ejemplos */
+.btn-prueba {
+    padding: 8px 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* Para que ocupen el mismo ancho */
+}
+
+.btn-prueba:hover {
+    background-color: #004494;
+}
+
+#resultado-ejemplos {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height: 50px;
+    font-family: monospace; /* Estilo tipo consola */
+    color: #333;
+}
+
+main.dark-mode #resultado-ejemplos {
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: #00ff00; /* Letra verde estilo terminal hacker */
+}
+
+/* Clases utilitarias reemplazando los estilos inline */
+.separador {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#input-item {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.btn-fijo {
+    flex: 0;
+}
+
+#lista-dinamica {
+    list-style: none;
+    padding: 0;
+}
+
+/* ==========================================================================
+   Estilos para Animaciones CSS vs JS
+   ========================================================================== */
+   
+.pista-animacion {
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    overflow: hidden; /* Evita que la caja se desborde visualmente */
+}
+
+main.dark-mode .pista-animacion {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+.caja-animada {
+    width: 50px;
+    height: 50px;
+    background-color: #e83e8c; /* Rosa para CSS */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.js-color {
+    background-color: #f39c12; /* Naranja para JS */
+}
+
+/* 
+  LA MAGIA DE CSS:
+  Definimos que CUALQUIER cambio en la propiedad 'transform' 
+  debe ocurrir suavemente (ease-in-out) a lo largo de 1 segundo.
+*/
+.caja-css-animada {
+    transform: translateX(200px); /* Movemos 200px a la derecha */
+    transition: transform 1s ease-in-out;
+}

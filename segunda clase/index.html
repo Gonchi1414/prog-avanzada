@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Perfil Personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tu Nombre</h1>
+    </header>
+
+    <main>
+        <button id="btn-tema">Cambiar Tema</button>
+        <h2>Biografía</h2>
+        <p>Escribe aquí una breve biografía sobre ti. Cuéntanos un poco sobre tu experiencia, lo que te apasiona y tus metas.</p>
+        
+        <section>
+            <h2>Mis 3 Habilidades Principales</h2>
+            <ul>
+                <li>Habilidad 1</li>
+                <li>Habilidad 2</li>
+                <li>Habilidad 3</li>
+            </ul>
+        </section>
+
+        <!-- Nueva sección para probar las funciones -->
+        <hr class="separador">
+        <section>
+            <h2>Prueba de Funciones</h2>
+            <div class="flex-container">
+                <button id="btn-sincrono" class="btn-prueba">Ejecutar Síncrono</button>
+                <button id="btn-asincrono" class="btn-prueba">Ejecutar Asíncrono</button>
+            </div>
+            <div id="resultado-ejemplos">
+                El resultado aparecerá aquí...
+            </div>
+        </section>
+
+        <!-- Nueva sección para manipulación del DOM -->
+        <hr class="separador">
+        <section>
+            <h2>Manipulación del DOM</h2>
+            <div class="flex-container">
+                <input type="text" id="input-item" placeholder="Nueva tarea...">
+                <button id="btn-agregar" class="btn-prueba btn-fijo">Agregar</button>
+            </div>
+            <ul id="lista-dinamica">
+                <!-- Aquí se agregarán dinámicamente los elementos <li> -->
+            </ul>
+        </section>
+
+        <!-- Nueva sección para Animaciones CSS vs JS -->
+        <hr class="separador">
+        <section>
+            <h2>Animaciones: CSS vs JS</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <div class="flex-container" style="justify-content: space-between; align-items: center;">
+                    <h3>1. CSS (Transiciones)</h3>
+                    <button id="btn-anim-css" class="btn-prueba btn-fijo">Animar (CSS)</button>
+                </div>
+                <div class="pista-animacion">
+                    <div id="caja-css" class="caja-animada">CSS</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex-container" style="justify-content: space-between; align-items: center;">
+                    <h3>2. JavaScript (Frames)</h3>
+                    <button id="btn-anim-js" class="btn-prueba btn-fijo">Animar (JS)</button>
+                </div>
+                <div class="pista-animacion">
+                    <div id="caja-js" class="caja-animada js-color">JS</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
