@@ -1,0 +1,120 @@
+<!-- La declaración DOCTYPE le dice al navegador que este documento está escrito en HTML5 -->
+<!DOCTYPE html>
+
+<!-- La etiqueta <html> es la raíz de todo el documento. "lang='es'" indica que el idioma principal es español -->
+<html lang="es">
+
+<!-- La etiqueta <head> contiene información sobre el documento (metadatos) que no se muestra directamente en la página -->
+
+<head>
+    <!-- <meta charset="UTF-8"> asegura que la página reconozca correctamente caracteres especiales como tildes y la 'ñ' -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página sea "responsive", es decir, que se adapte bien al tamaño de pantallas de celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <title> es el nombre que aparecerá en la pestaña superior del navegador web -->
+    <title>Presentación de Estudiante</title>
+
+    <!-- La etiqueta <style> nos permite escribir código CSS aquí mismo para darle diseño, color y "formas" a la página -->
+    <style>
+        /* Estilos generales para el fondo de la página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #053c74;
+            /* Color de fondo gris claro/azulado */
+            display: flex;
+            justify-content: center;
+            /* Centra el contenido horizontalmente */
+            align-items: center;
+            /* Centra el contenido verticalmente */
+            height: 100vh;
+            /* Ocupa el 100% de la altura de la pantalla */
+            margin: 0;
+        }
+
+        /* Forma básica 1: Un rectángulo con bordes redondeados para la tarjeta principal */
+        .tarjeta {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            /* Esta propiedad redondea las esquinas del rectángulo */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            /* Agrega una sombra suave para dar efecto de profundidad */
+            text-align: center;
+            max-width: 350px;
+        }
+
+        /* Forma básica 2: Un círculo perfecto para simular una foto de perfil o avatar */
+        .circulo-foto {
+            width: 120px;
+            /* Ancho del elemento */
+            height: 120px;
+            /* Alto del elemento (igual al ancho para que sea simétrico) */
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            /* Fondo con degradado de colores */
+            border-radius: 50px;
+            /* Poner el border-radius al 50% convierte un cuadrado en un círculo perfecto */
+            /*cambia el cuadrado con px*/
+            margin: 0 auto 20px auto;
+            /* Centra el círculo dentro de la tarjeta y le da espacio abajo */
+
+            /* Estas tres líneas centran la letra 'A' exactamente en el medio del círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: rgb(94, 38, 38);
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        /* Estilos para el texto de la tarjeta */
+        h1 {
+            margin: 0 0 5px;
+            color: #2c3e50;
+        }
+
+        h3 {
+            margin: 0 0 15px;
+            color: #4facfe;
+            font-weight: normal;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<!-- La etiqueta <body> contiene todo el contenido visual y estructural que el usuario verá en la pantalla -->
+
+<body>
+
+    <!-- <div> es un contenedor genérico. Lo usamos para agrupar los elementos de nuestra tarjeta -->
+    <div class="tarjeta">
+
+        <!-- Aquí usamos nuestro "círculo" creado con CSS en la etiqueta <style>. Adentro va la inicial del nombre -->
+        <div class="circulo-foto">
+            G
+        </div>
+
+        <!-- <h1> es el encabezado principal y más grande. Usualmente se usa para el título o el nombre -->
+        <h1>Mariela alvarez</h1>
+
+        <!-- <h3> es un encabezado de menor jerarquía, ideal para subtítulos como la carrera del estudiante -->
+        <h3>Estudiante en ingenieria de Sistemas</h3>
+
+        <!-- <p> representa un párrafo de texto común -->
+        <p>
+            ¡Hola! Soy estudiante en ingenieria de Sistemas apasionado por la programación, el diseño de interfaces web y
+            siempre
+            en constante aprendizaje de nuevas tecnologías.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
