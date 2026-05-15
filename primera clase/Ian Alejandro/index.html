@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button onclick="mostrarVentana()">
+        MI PRIMER PROYECTO
+    </button>
+
+
+
+    <div id="ventana" class="ventana">
+        <h1>Hola Mundo</h1>
+        <p> soy ian alejandro de la carrera de ingenieria de sistemas de 5 semestre
+            de mi carrera estoy aprendiendo html y css
+        </p>
+            <button onclick="cerrarVentana()">
+        cerrar
+    </button>
+    </div>
+
+
+    <script>
+        function mostrarVentana(){
+            document.getElementById("ventana").style.display = "block";
+        }
+    </script>
+
+    <script>
+        function cerrarVentana(){
+            document.getElementById("ventana").style.display = "none";
+            
+        }
+    </script>
+</body>
+</html>

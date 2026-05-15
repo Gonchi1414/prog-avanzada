@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset=""UTF-8">
+    <meta name="viewport"
+content="width=deivice-width,initial-scale=1.0">
+    <tittle>Presentacion - Abiel</tittle>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            font-family: 'Syne', sans-serif;
+            background-color: #0d0d0d;
+            display: flex;
+            justify-content: center;
+            align-items: centro;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Fondo don puntos decorativos */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(circle, #ffffff0a 1px,transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+        /* Forma basica 1: tarjeta */
+        .tarjeta{
+            background-color: #161616;
+            border: 1px solid #2a2a2a;
+            padding: 48px 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 60px rgba(79, 172, 254, 0.08), 0 20px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 90%;
+            position: relative;
+            animation: aparecer 0.7s ease both;
+        }
+        /* Linea decorativa */
+        .tarjeta::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 15%;
+            right: 15%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #4facfe, #00f2fe, transparent);
+            border-radius: 0 0 4px 4px;
+        }
+
+        /* Forma basica 2: Circulo 360°*/ 
+        .circulo-foto {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 50%;
+            margin: 0 auto 24px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0d0d0d;
+            font-size: 48px;
+            font-weight: 800;
+            font-family: 'Space Mono', monospace;
+            position: relative;
+            animation: pulso 3s ease-in-out infinite;
+        }
+        /* Anillo del circulo*/ 
+        .circulo-foto::after{
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border: 2px solid rgba(79, 172, 254, 0.3);
+            animation: rotar 6s linear infinite;
+            border-top-color: #4facfe;
+        }
+        h1{
+            font-family: 'Syne', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+        h3{
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: #4facfe;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p{
+            color: #888;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            font-weight: 400;
+        }
+        /* Separador */
+        .separador {
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            margin: 18px auto;
+            border-radius: 2px;
+        }
+        /* Animaciones */
+        @keyframes pulso {
+            0%, 100% {box-shadow: 0 0 0 0 rgba(79,172,254,0.3);}
+            50% {box-shadow: 0 0 0 12px rgba(79,172,254,0);}
+        }
+        @keyframes rotar {
+            from { transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tarjeta">
+        <!-- Forma Basica 2: Circulo -->
+         <div class="circulo-foto">
+            A
+        </div>
+
+        <!--Subtitulo con la carrera-->
+        <h3>Ing. de Sistemas Estudiante</h3>
+
+        <div class="separador"></div>
+
+        <p>
+            ¡Hola! Mi nombre es <strong style="color:#fff;"></strong>, soy estudiante de ingenieria de Sistemas 
+            apasionado por el nuevo aprendizaje y con ganas de seguir retroalimentadome.
+        </p>
+    </div>
+</body>
+</html>
