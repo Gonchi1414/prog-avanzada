@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: linear-gradient(-45deg, #000000, #2b1055, #4b0082, #000000);
+
+  background-size: 400% 400%;
+
+  animation: fondoAnimado 10s ease infinite;
+}
+@keyframes fondoAnimado {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
