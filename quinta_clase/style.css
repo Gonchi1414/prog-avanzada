@@ -1,0 +1,56 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+}
+.tarjeta {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.consola {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-family: monospace;
+
+}
+
+#btn-tema {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+main.dark-mode #btn-tema {
+    background-color: black;
+    color: white;
+}
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+.tarjeta.dark-mode {
+    border: 1px solid white;
+}
+.caja {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#caja-css { background-color: #34a853; transition: transform 0.5s ease; }
+#caja-js { background-color: #ea4335; }
+.caja-css-animada {
+    transform: translateX(800px);
+}
